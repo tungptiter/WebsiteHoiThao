@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&family=Sora:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #0d6efd;
+    --dark: #21252f;
+    --body: #888;
+    --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+body{
+    font-family: 'Sora', sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark);
+    font-weight: 900;
+}
+
+a {
+    color: var(--box-shadow);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.navbar .logo {
+    width: 60px;
+}
+
+.navbar .nav-link {
+    font-size: 14px;
+    font-weight: 700;
+}
+.hero {
+    background-image: url("../img/bg5.png");
+    /* background-size: 1350px; */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* để cho ảnh giữ nguyeeeem khi lướt*/
+    position: relative;
+    z-index: 2;
+
+}
+.hero::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(54, 36, 36, 0.3); /* chèn màu nền hơi tối*/
+    z-index: -1; /* để hiển cho cái nền tối xuống dưới*/
+}
+
+
+/* SECTION */
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+/* nội dung của 1 col trong section */
+.card-effect {
+    box-shadow: var(--box-shadow);
+    padding: 25px;
+    transition: all 0 0.35s ease;
+}
+
+.card-effect:hover {
+    box-shadow: none; /* bỏ bóng đi */
+    transform: translateY(5px); /* kéo cái div xuống dưới theo chiều y 5 px */
+    /*  */
+}
+/* end of nội dung của 1 col trong section */
+
+/* icon trong service */
+.iconbox {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: white;
+    font-size: 32px;
+    border-radius: 100px;
+    flex: none;
+}
+
+/* end of icon trong service */
+
+/* xử lý service lúc bình thường và khi chuột di chuyển qua */
+.service {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.service::after { 
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%; /* cho nền xanh nó lên trên đỉnh để tý kéo xuống*/
+    left: 0;
+
+    background-color: var(--primary);
+    z-index: -1;
+    opacity: 0; /* */
+    transition: all 0.4s ease;
+    border-radius: 10px; /*bo góc vào nhìn cho đỡ phèn*/
+}
+/* khi di chuyển qua hover sẽ chuyển nền xanh chữ trắng và icon màu cùng ngược lại */
+.service:hover h5,
+.service:hover p {
+    color: white;
+}
+
+.service:hover .iconbox {
+    background-color: white;
+    columns: var(--primary);
+}
+.service:hover::after {
+    opacity: 1;
+    top: 0;
+
+}
+/* end of xử lý service lúc bình thường và khi chuột di chuyển qua */
+
+/* DIỄN GIẢ = feature */
+
+.col-img { /*giống hero lúc bình thường*/
+    background-image: url("../img/couple.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+
+/* Khách mời đặc biệt */
+
+.location {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.location .overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 20, 51, 0.5);
+
+    padding: 30px;
+    opacity: 0;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease;
+}
+
+.location img {
+    height: 300px;
+    /* border-radius: 10px; */
+    transition: all 0.4s ease;
+}
+.location:hover .overlay {
+    opacity: 1;
+}
+
+.location:hover img {
+    /* border-radius: 10px; */
+    transform: scale(1.1);
+}
+/*  End of Khách mời đặc biệt */
+
+/* Chi phí */
+.pricing i {
+    font-size: 20px;
+    color: var(--primary);
+}
+.pricing ul li {
+    margin-top: 8px;
+    
+}
+/* End of Chi phí */
+
+/* Nhà tài trơ */
+
+.donate img {
+    width: 125px;
+    height: 125px;
+    border-radius: 100px;
+}
+
+/* End of Nhà tài trơ */
