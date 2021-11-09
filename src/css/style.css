@@ -31,7 +31,7 @@ img {
     box-shadow: var(--box-shadow);
 }
 
-.navbar .logo {
+.logo {
     width: 60px;
 }
 
@@ -71,12 +71,13 @@ img {
     box-shadow: var(--box-shadow);
     padding: 25px;
     transition: all 0 0.35s ease;
+    
 }
 
 .card-effect:hover {
     box-shadow: none; /* bỏ bóng đi */
     transform: translateY(5px); /* kéo cái div xuống dưới theo chiều y 5 px */
-    /*  */
+    
 }
 /* end of nội dung của 1 col trong section */
 
@@ -203,3 +204,34 @@ img {
 }
 
 /* End of Nhà tài trơ */
+
+/* bài đăng */
+.blog-post {
+    /* border-radius: 10px; */
+}
+.blog-post img {
+    height: 203px;
+    border-radius: 10px;
+}
+/* End of bài đăng */
+
+/* liên lạc */
+
+/* End of liên lạc */
+
+/* footer */
+.footer-top {
+    background-color: var(--dark);
+    padding: 2em;
+}
+
+.footer-top a,
+.footer-top h5 {
+    color: white;
+    text-decoration: none;
+}
+.footer-top a:hover {
+    font-size: 18px;
+    color: rgba(145, 215, 243, 0.795);
+}
+/* End of footer */
