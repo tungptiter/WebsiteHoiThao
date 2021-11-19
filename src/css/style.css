@@ -39,17 +39,18 @@ img {
     font-size: 14px;
     font-weight: 700;
 }
-.hero {
+.trangchu {
     background-image: url("../img/bg5.png");
     /* background-size: 1350px; */
+    background-attachment: fixed; /* để cho ảnh giữ nguyeeeem khi lướt*/
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* để cho ảnh giữ nguyeeeem khi lướt*/
     position: relative;
-    z-index: 2;
+    z-index: 2; 
+    /*để ảnh hiện thị dưới text*/
 
 }
-.hero::after{
+.trangchu::after{
     content: "";
     width: 100%;
     height: 100%;
@@ -57,12 +58,13 @@ img {
     top: 0;
     left: 0;
     background-color: rgba(54, 36, 36, 0.3); /* chèn màu nền hơi tối*/
-    z-index: -1; /* để hiển cho cái nền tối xuống dưới*/
+    z-index: -1; 
+    /* để hiển cho cái nền tối xuống dưới*/
 }
 
 
 /* SECTION */
-.section {
+.tinhnang {
     padding-top: 120px;
     padding-bottom: 120px;
 }
@@ -101,7 +103,7 @@ img {
 .service {
     position: relative;
     z-index: 2;
-    overflow: hidden;
+    overflow: hidden; /*để khi mà di chuyển qua thì ko bị kéo trôi lên trên*/
     border-radius: 10px;
 }
 
@@ -127,6 +129,7 @@ img {
 
 .service:hover .iconbox {
     background-color: white;
+    color: #0d6efd;
     columns: var(--primary);
 }
 .service:hover::after {
@@ -155,7 +158,7 @@ img {
 
 .location .overlay {
     content: '';
-    position: absolute;
+    position: absolute; /*để cố định các text trong ảnh thôi*/
     top: 0;
     left: 0;
     width: 100%;
@@ -181,6 +184,11 @@ img {
 .location:hover img {
     /* border-radius: 10px; */
     transform: scale(1.1);
+}
+
+.location a {
+    color: var(--box-shadow);
+    text-decoration: none;
 }
 /*  End of Khách mời đặc biệt */
 
@@ -212,6 +220,10 @@ img {
 .blog-post img {
     height: 203px;
     border-radius: 10px;
+}
+.blog-post a {
+    color: black;
+    text-decoration: none;
 }
 /* End of bài đăng */
 
